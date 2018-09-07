@@ -1,0 +1,30 @@
+CVICENIA:
+
+1. Najdite v genome cloveka zhluk genov (gene cluster) S100A
+
+    chr1:153,350,000-153,633,000
+  cleny clusteru(geny) :       S100A9, S100A12, S100A8, S100A7a, S100A7L2, S100A7, S100A6, S100A5, S100A4, S100A3, S100A2, S100A16, S100A14, S100A13, S100A1
+
+        2. Pomocou "Genome/Table Browser" a pripadne dalsieho spracovania ziskajte:
+           1) sekvenciu daneho useku vo formate FASTA
+
+               View - DNA (v menu hore)
+
+     3) anotacie vo formate GFF3
+
+         Table Browser - position - get GTF (bude potreba percislovat odcitanim 153,350,000 od vsetkych pozicii)
+
+  3. Pomocou vhodnych DNA-Seq dat vykonajte identifikaciu SNP v promotoroch a SNP v kodujucich sekvenciach jednotlivych transkriptov (mapovanie na referencny genom, uprava SAM/BAM suborov pomocou samtools, vytvorenie VCF suboru pomocou samtools pileup, preskumanie v IGV alebo inom prehliadaci).
+
+  4. Ready z bodu 5., ktore nemapuju do zhluku S100A odfiltrujte a skumany region sa pokuste poskladat z readov (velvet)
+
+  Hodnotene cvicenie
+  ------------------
+#tophead bere v potaz jen EXONY z RNA(ta pokryva jen exony), v ramci traskripce leda podobne
+# pocitam kolik readu se namapuje na ktery gen z clusteru
+  5. Pomocou vhodnych RNA-Seq dat odhadnite expresiu clenov zhluku S100A v danom experimente (spocitat ready mapujuce do urcitych oblasti, vid https://www.biostars.org/p/11105/). Hladajte dokazy pre pritomnost intronov v transkriptoch a alternativny zostrih (tophat).
+
+  DNA-Seq a RNA-Seq data: http://trace.ncbi.nlm.nih.gov/Traces/study/?acc=SRP052901
+# Assay Type: RNA seq, vyberu si ktery chci 400Mbases, mapuji ho na tu stejnu vec jak ve cviku tedy, fasta/fastq(ted nevim ktery, na cluster takze FASTA(mozna)), zjisti z prikazu a popisu programu co se kam mapovalo
+# Pozor aby to bylo single cell seq(z jedne bunky, nechci trio seq..) CLOVEKA homo sapiesnc musi to byt cDNA RNA-Seq
+  DNA-Seq data: https://www.ncbi.nlm.nih.gov/sra/SRX1620434[accn] (alebo ich podmnozina)

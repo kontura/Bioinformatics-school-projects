@@ -1,0 +1,19 @@
+
+#NEW VERSION
+1. Porovnejte proteomy Homo sapiens (člověk), Arabidopsis thaliana (huseníček rolní) a Saccharomyces cerevisiae (kvasinky) dle výskytu čtveric aminokyselin kódovaných sekvencemi RNA, které vyhovují regulárnímu výrazu GGNxGGNxGGNxGG (takové sekvence tvoří G-kvadruplexy), kde N je libovolný nukleotid a x je počet znaků N od 0-4, tak aby délka celého řetězce byla vždy 12. Kromě těchto čtveric budete přímo hodnotit i sekvence 12bp (můžete pracovat buď s cDNA nebo RNA sekvencemi).
+
+
+
+- seřaďte sekvence RNA a sekvence aminokyselin vzestupně podle toho, jak moc se jejich výskyt odlišuje od očekávané frekvence dané zastoupením jednotlivých kodonů/nukleotidů/aminokyselin v zadaných proteomech (vyjádřete jako poměr skutečných a očekávaných hodnot, vzestupně, přesný model "očekávání" není stanoven, zvolte podle vlastního vkusu). 
+
+- Protože dat bude hodně, stačí vypsat a porovnat mezi proteomy seznamy TOP50 sekvencí aminokyselin a stejně pak u nukleotidových sekvencí.
+
+
+- pomocí programu pqsfinder z R-Bioconductor spočítejte skóre potenciálního G-kvadruplexu a zobrazte graficky závislost mezi skóre a touto odlišností (poměrem) u všech šetřených nukleotidových sekvencí. 
+#pqsfinder has to be configured to search only for G-kvadruplexy
+#
+#EACH seq has ratio score and each seq CAN have multiple pqsfindef finds with each own(potentially different) score.. 
+
+- Pro každý proteom spočítejte Pearsonův korelační koeficient (9) a zjistěte, jestli je hodnota R na hladině významnosti 0.05 statisticky významně odlišná od 0.
+#mezi pomerem(nalezena vs prumerna) a skorem z pqsfinderu
+#

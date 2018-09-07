@@ -1,0 +1,52 @@
+1. (5 min) Spustite si program Pymol z adresara instalacie jazyka Python, pripadne si zabezpecte pristup k programu Pymol inak:
+   - nainstalujte program z http://www.pymol.org (registracia, lubovolny OS)
+   - nainstalujte program z pymol.tgz v ISe Soubory/Ostatni (Linux i686)
+   - zalozny pristup na helix.fi.muni.cz, vyziadajte si ucet a heslo od vyucujiceho
+
+2. (40 min) Zoznamte sa so zakladnymi funkciami programu Pymol pomocou tutorialu
+   v ISe (pymol_tutorial.pdf)
+
+3. (60 min) Rieste postupne nasledovne ulohy. Kazdych 20 minut cvicenia 
+   spolocne vyriesime trojicu rieseni. Tri oznacene ulohy budu po odovzdani do 22.11.2017 
+   hodnotene 8 bodmi
+====
+- Vytvorte skript, ktory zvyrazni vsetky histidiny a necha u nich vypisat ich poradove cislo
+
+- Najdite si na internete jednoduchy skript pre Pymol, pripadne si vytvorte
+  taky, ktory obsahuje aspon 4 rozne prikazy. Odskusajte jeho funkcnost 
+  prikazom "@". Prepiste ho do jazyka python s vyuzitim API Pymolu a spustite 
+  v Pymole prikazom "run"
+
+- Vytvorte skript, ktory znazorni v proteine vsetky vodikove vazby
+====
+- Vytvorte skript, ktory zobrazi vsetky hydrofobicke interakcie v proteine
+  na pozadi kostry proteinu
+# hydrofobicke interakce mezi aminoacids v rozumne vzdalenosti, nejak se orientuji a spevnuji strukturu proteinu. Nepolarni charakter, neumi interagovat s vodou--interaguji se sebou, -> musi byt blizko sebe(vzdalenost mezi atomy) (dist cmd) 5-8 (ansromov nebo jak je jednotka) eg. (6 a.), 
+# Vyberu vse, chci jen CA, a pak mezi vsemi dist, a hledam vzdalenostni hodnotu.
+# additionally existuje prikaz NEAR_TO or WITHIN (mozna by to slo pouzit) 
+# peptidide 1.8
+# mezi syra 1,3 (mezi atomi je to mensi)
+
+- Vytvorte skript, ktory ulozi do PDB suboru vsetky aktualne zvolene atomy.
+#fce save
+
+- Zobrazte si protein v programe Pymol. Nechajte farebne zvyraznit vsetky cysteiny. Ktore by mohli tvorit cysteinove mostiky? Aka je u nich vzdialenost medzi parujucimi sa cysteinmi? Ako koresponduje s ocakavanou vzdialenostou na zaklade chemickej vazby?
+#kkkk
+====
+- Vymodelujte molekulu propanu, etanolu, glukozy
+
+- Vymodelujte alebo inak zadefinujte lubovolny tripeptid. Napiste skript, ktory bude otacat dve strany tripeptidu okolo vazby fi a psi podla udajov zadanych uzivatelom
+
+- Vymyslite si vlastne zadanie podobneho typu, v pripade potreby prekonzultujte s cviciacim a vyrieste
+====
+- >>3b<< - Napiste skript pre Pymol, ktory v lubovolnej strukture identifikuje cysteiny, ofarbi ich na zlto, spocita ich vzdialenost a tie, ktore by mohli tvorit cysteinove mostikdy, ofarbi na oranzovo a vypise v strukture ich identifikator a velkost vazby #mezi dvuma atomam cistenov (siry)
+# lib cislo 5-8, respektive vygooglet disulfitide bond a najit jejit 2.05 A mezi syrami. Dat toleranci muze byt chyba
+
+- >>2b<< - Vytvorte skript, ktory pre aktualne zobrazeny protein vypocita stred proteinu 
+#je jich vice, vyberu si ktery chci
+
+- >>3b<< - Vytvorte skript, ktory najde v proteine par atomov s minimalnou (okrem susedov v primarnej strukture) a maximalnou vzdialenostou a vyznaci ich v zobrazeni farbou a vzdialenostou.
+# susedi o jedno ne
+
+molekula 1N06
+
