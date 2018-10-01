@@ -2,6 +2,7 @@
 
 # BIF
 resolve_overlaps.py - from a given file of listed genes in GFF format finds the biggest coverage of genes without overlap, using dynamic programming
+
 project.py - basically just parse big file and reformat to CSV
 
 # BIO
